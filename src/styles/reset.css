@@ -1,0 +1,53 @@
+/* 样式的重置 */
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+header,
+menu,
+section,
+p,
+input,
+td,
+th,
+ins {
+  padding: 0;
+  margin: 0;
+}
+
+a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+/* 全局样式 */
+body,
+textarea,
+select,
+input,
+button {
+  font-size: 12px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.wrap-1100 {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.wrap-980 {
+  width: 980px;
+  margin: 0 auto;
+}

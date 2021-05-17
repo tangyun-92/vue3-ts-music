@@ -1,0 +1,18 @@
+/*
+ * @Author: 唐云 
+ * @Date: 2021-05-17 15:52:22 
+ * @Last Modified by: 唐云
+ * @Last Modified time: 2021-05-17 16:02:34
+ */
+.t-header {
+  width: 100%;
+  height: 70px;
+  background-color: #242424;
+  border-bottom: 1px solid #000;
+
+  .header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
