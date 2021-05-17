@@ -25,9 +25,44 @@ ins {
   margin: 0;
 }
 
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
 a:hover {
   color: #666;
   text-decoration: underline;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  outline: none;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
 }
 
 /* 全局样式 */
@@ -50,4 +85,58 @@ button {
 .wrap-980 {
   width: 980px;
   margin: 0 auto;
+}
+
+.sprite_01 {
+  background: url(../assets/img/sprite_01.png) no-repeat 0 9999px;
+}
+
+.sprite_02 {
+  background: url(../assets/img/sprite_02.png) no-repeat 0 9999px;
+}
+
+.sprite_cover {
+  background: url(../assets/img/sprite_cover.png) no-repeat 0 9999px;
+}
+
+.sprite_icon {
+  background: url(../assets/img/sprite_icon.png) no-repeat 0 9999px;
+}
+
+.sprite_icon2 {
+  background: url(../assets/img/sprite_icon2.png) no-repeat 0 9999px;
+}
+
+.sprite_icon3 {
+  background: url(../assets/img/sprite_icon3.png) no-repeat 0 9999px;
+}
+
+.sprite_button {
+  background: url(../assets/img/sprite_button.png) no-repeat 0 9999px;
+}
+
+.sprite_button2 {
+  background: url(../assets/img/sprite_button2.png) no-repeat 0 9999px;
+}
+
+.sprite_table {
+  background: url(../assets/img/sprite_table.png) no-repeat 0 9999px;
+}
+
+.sprite_playbar {
+  background: url(../assets/img/playbar_sprite.png) no-repeat 0 9999px;
+}
+
+.sprite_playlist {
+  background: url(../assets/img/playlist_sprite.png) no-repeat 0 9999px;
+}
+
+.image_cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-indent: -9999px;
+  background: url(../assets/img/sprite_cover.png) no-repeat -145px -57px;
 }

@@ -2,7 +2,7 @@
  * @Author: 唐云 
  * @Date: 2021-05-17 15:52:22 
  * @Last Modified by: 唐云
- * @Last Modified time: 2021-05-17 16:02:34
+ * @Last Modified time: 2021-05-17 17:30:29
  */
 .t-header {
   width: 100%;
@@ -14,5 +14,77 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .logo {
+      width: 176px;
+      height: 69px;
+      background-position: 0 0;
+    }
+
+    .nav {
+      width: 508px;
+
+      ul {
+        height: 70px;
+        line-height: 70px;
+        display: flex;
+        text-align: center;
+      }
+
+      li {
+        height: 70px;
+        font-size: 14px;
+        position: relative;
+
+        a {
+          height: 70px;
+          width: 94px;
+          display: inline-block;
+          color: #ccc;
+
+          &:hover {
+            color: #fff;
+            background: #000;
+            text-decoration: none;
+          }
+        }
+
+        :last-of-type a {
+          position: relative;
+          ::after {
+            position: absolute;
+            content: '';
+            width: 28px;
+            height: 19px;
+            background-image: url('../../assets/img/sprite_01.png');
+            background-position: -190px 0;
+            top: 20px;
+            right: -15px;
+          }
+        }
+      }
+
+      li.active {
+        color: #fff;
+        background: #000;
+        text-decoration: none;
+      }
+
+      .active .icon {
+        position: absolute;
+        display: inline-block;
+        width: 12px;
+        height: 7px;
+        bottom: -1px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-position: -226px 0;
+      }
+    }
+  }
+
+  .bottom-line {
+    height: 5px;
+    background-color: #c20c0c;
   }
 }

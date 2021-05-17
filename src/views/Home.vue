@@ -1,20 +1,18 @@
 <template>
   <div>
+    <t-header></t-header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
-import { getTopBanners } from '@/api/discover/recommend'
+import { defineComponent } from 'vue'
+import THeader from '@/components/THeader/index.vue'
 
 export default defineComponent({
   name: 'Home',
-  setup() {
-    onMounted(() => {
-      getTopBanners().then(res => {
-        console.log(res)
-      })
-    })
+  components: {
+    THeader
   }
 })
 </script>

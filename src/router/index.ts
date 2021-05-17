@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import Home from '@/views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -6,25 +7,41 @@ const routes: Array<RouteRecordRaw> = [
     redirect: 'discover'
   },
   {
-    path: '/discover',
-    name: 'Discover',
-    component: () => import('@/views/discover/index.vue'),
+    path: '/',
+    name: 'Home',
+    component: Home,
     redirect: '/discover/recommend',
     children: [
       {
-        path: 'recommend',
-        name: 'Recommend',
+        path: '/discover',
+        name: 'Discover',
         component: () => import('@/views/discover/recommend/index.vue'),
-        meta: {
-          title: '推荐'
-        }
+        redirect: '/discover/recommend',
+        children: [
+          {
+            path: 'recommend',
+            name: 'Recommend',
+            component: () => import('@/views/discover/recommend/index.vue'),
+            meta: {
+              title: '推荐'
+            }
+          },
+          {
+            path: 'top-list',
+            name: 'TopList',
+            component: () => import('@/views/discover/top-list/index.vue'),
+            meta: {
+              title: '排行榜'
+            }
+          }
+        ]
       },
       {
-        path: 'top-list',
-        name: 'TopList',
-        component: () => import('@/views/discover/top-list/index.vue'),
+        path: '/my',
+        name: 'My',
+        component: () => import('@/views/my/index.vue'),
         meta: {
-          title: '排行榜'
+          title: '我的音乐'
         }
       }
     ]
