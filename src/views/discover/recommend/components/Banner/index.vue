@@ -1,3 +1,10 @@
+/*
+ * @Author: 唐云 
+ * @Date: 2021-05-18 16:41:34 
+ * @Last Modified by:   唐云 
+ * @Last Modified time: 2021-05-18 16:41:34 
+ banner组件
+ */
 <template>
   <div :style="{ background: 'url(' + bgImage + ') center center/6000px' }">
     <div class="wrap-banner">

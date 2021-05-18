@@ -1,3 +1,10 @@
+/*
+ * @Author: 唐云 
+ * @Date: 2021-05-18 16:41:48 
+ * @Last Modified by: 唐云
+ * @Last Modified time: 2021-05-18 17:26:50
+ 发现音乐
+ */
 <template>
   <div>
     <div class="sub-nav">
@@ -20,7 +27,7 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, ref, Ref } from 'vue'
+import { computed, defineComponent, Ref } from 'vue'
 import { discoverMenu } from '@/common/local-data'
 import { useRoute } from 'vue-router'
 
@@ -28,13 +35,14 @@ export default defineComponent({
   name: 'Discover',
   setup() {
     const route = useRoute() // 路由
-    const isActive: Ref<string> = ref(route.path) // 选中状态
+    const isActive: Ref<string> = computed(() => route.path) // 选中状态
     /**
      * nav导航点击事件
      */
     const handleClickNav = (link: string) => {
       isActive.value = link
     }
+    console.log('123')
 
     return {
       discoverMenu,
