@@ -1,17 +1,18 @@
 <template>
   <div>
-    推荐
+    <banner></banner>
   </div>
 </template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
+import Banner from './components/Banner.vue'
 
-export default defineComponent ({
-  name: 'Recommend'
+export default defineComponent({
+  name: 'Recommend',
+  components: { Banner }
 })
 </script>
 
 <style lang='scss' scoped>
-
 </style>

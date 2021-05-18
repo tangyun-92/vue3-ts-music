@@ -20,8 +20,8 @@ service.interceptors.request.use(
 // 响应拦截
 service.interceptors.response.use(
   (response) => {
-    const res = response.data
-    return res
+    const { data } = response
+    return data
   },
   (err) => {
     if (err && err.response) {
@@ -39,13 +39,6 @@ service.interceptors.response.use(
     return Promise.reject(err)
   }
 )
-
-// interface requestProps {
-//   url: string
-//   method: string
-//   data: object
-//   timeout: number
-// }
 
 const request = (requestObj: any) => {
   const { url, method, data, timeout } = requestObj

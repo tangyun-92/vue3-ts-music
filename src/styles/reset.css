@@ -131,6 +131,10 @@ button {
   background: url(../assets/img/playlist_sprite.png) no-repeat 0 9999px;
 }
 
+.sprite_banner {
+  background: url(../assets/img/banner_sprite.png) no-repeat 0 9999px;
+}
+
 .image_cover {
   position: absolute;
   left: 0;
