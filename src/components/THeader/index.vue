@@ -2,7 +2,7 @@
  * @Author: 唐云 
  * @Date: 2021-05-17 15:34:30 
  * @Last Modified by: 唐云
- * @Last Modified time: 2021-05-18 10:05:13
+ * @Last Modified time: 2021-05-18 10:57:13
  头部组件
  */
 <template>
@@ -51,10 +51,12 @@ import { useRoute } from 'vue-router'
 export default defineComponent({
   name: 'THeader',
   setup() {
-    const isActive: Ref<string> = ref('') // 选中状态
     const route = useRoute() // 路由
+    const isActive: Ref<string> = ref(route.path) // 选中状态
     onMounted(() => {
-      isActive.value = route.path
+      if (route.path.indexOf('discover') !== -1) {
+        return isActive.value = '/discover/recommend'
+      }
     })
     /**
      * nav导航点击事件
@@ -66,8 +68,8 @@ export default defineComponent({
     return {
       headerLinks,
       isActive,
-      handleClickNav,
-      route
+      handleClickNav
+      
     }
   }
 })

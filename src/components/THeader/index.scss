@@ -2,7 +2,7 @@
  * @Author: 唐云 
  * @Date: 2021-05-17 15:52:22 
  * @Last Modified by: 唐云
- * @Last Modified time: 2021-05-18 10:05:38
+ * @Last Modified time: 2021-05-18 10:25:05
  */
 .t-header {
   width: 100%;
@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: space-between;
 
+    // logo
     .logo {
       width: 176px;
       height: 69px;
@@ -22,6 +23,7 @@
       margin-right: 20px;
     }
 
+    // 导航
     .nav {
       width: 520px;
 
@@ -93,6 +95,7 @@
       }
     }
 
+    // 搜索
     .search {
       width: 158px;
       height: 32px;
@@ -115,6 +118,7 @@
       }
     }
 
+    // 创作中心
     .framer-center {
       width: 90px;
       height: 32px;
@@ -133,6 +137,7 @@
       }
     }
 
+    // 登录
     .login {
       color: #787878;
       cursor: pointer;

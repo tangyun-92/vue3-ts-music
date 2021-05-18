@@ -15,7 +15,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/discover',
         name: 'Discover',
-        component: () => import('@/views/discover/recommend/index.vue'),
+        component: () => import('@/views/discover/index.vue'),
         redirect: '/discover/recommend',
         meta: {
           title: '发现音乐'
@@ -35,6 +35,14 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/views/discover/top-list/index.vue'),
             meta: {
               title: '排行榜'
+            }
+          },
+          {
+            path: 'play-list',
+            name: 'PlayList',
+            component: () => import('@/views/discover/play-list/index.vue'),
+            meta: {
+              title: '歌单'
             }
           }
         ]
