@@ -2,7 +2,7 @@
  * @Author: 唐云 
  * @Date: 2021-05-17 15:52:22 
  * @Last Modified by: 唐云
- * @Last Modified time: 2021-05-17 17:30:29
+ * @Last Modified time: 2021-05-18 10:05:38
  */
 .t-header {
   width: 100%;
@@ -19,10 +19,11 @@
       width: 176px;
       height: 69px;
       background-position: 0 0;
+      margin-right: 20px;
     }
 
     .nav {
-      width: 508px;
+      width: 520px;
 
       ul {
         height: 70px;
@@ -38,7 +39,7 @@
 
         a {
           height: 70px;
-          width: 94px;
+          padding: 0 20px;
           display: inline-block;
           color: #ccc;
 
@@ -47,6 +48,23 @@
             background: #000;
             text-decoration: none;
           }
+        }
+
+        a.active {
+          color: #fff;
+          background: #000;
+          text-decoration: none;
+        }
+
+        .active .icon {
+          position: absolute;
+          display: inline-block;
+          width: 12px;
+          height: 7px;
+          bottom: -1px;
+          left: 50%;
+          transform: translate(-50%, 0);
+          background-position: -226px 0;
         }
 
         :last-of-type a {
@@ -62,23 +80,65 @@
             right: -15px;
           }
         }
-      }
 
-      li.active {
+        .hot {
+          display: block;
+          position: absolute;
+          top: 21px;
+          left: 100px;
+          width: 28px;
+          height: 19px;
+          background-position: -190px 0;
+        }
+      }
+    }
+
+    .search {
+      width: 158px;
+      height: 32px;
+      margin-left: 78px;
+
+      .search-bg {
+        width: 158px;
+        height: 32px;
+        background-position: 0 -99px;
+        background-color: #fff;
+        border-radius: 32px;
+
+        input {
+          color: #333;
+          line-height: 16px;
+          width: 76%;
+          background: transparent;
+          margin: 8px 0 0 30px;
+        }
+      }
+    }
+
+    .framer-center {
+      width: 90px;
+      height: 32px;
+      box-sizing: border-box;
+      padding-left: 16px;
+      margin: 0 20px 0 12px;
+      border: 1px solid #4f4f4f;
+      line-height: 33px;
+      color: #ccc;
+      border-radius: 20px;
+      cursor: pointer;
+
+      &:hover {
         color: #fff;
-        background: #000;
-        text-decoration: none;
+        border: 1px solid #fff;
       }
+    }
 
-      .active .icon {
-        position: absolute;
-        display: inline-block;
-        width: 12px;
-        height: 7px;
-        bottom: -1px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        background-position: -226px 0;
+    .login {
+      color: #787878;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
       }
     }
   }

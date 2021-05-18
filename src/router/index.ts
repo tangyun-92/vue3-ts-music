@@ -17,6 +17,9 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Discover',
         component: () => import('@/views/discover/recommend/index.vue'),
         redirect: '/discover/recommend',
+        meta: {
+          title: '发现音乐'
+        },
         children: [
           {
             path: 'recommend',
@@ -42,6 +45,14 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/my/index.vue'),
         meta: {
           title: '我的音乐'
+        }
+      },
+      {
+        path: '/friend',
+        name: 'Friend',
+        component: () => import('@/views/friend/index.vue'),
+        meta: {
+          title: '朋友'
         }
       }
     ]

@@ -2,7 +2,7 @@
  * @Author: 唐云 
  * @Date: 2021-05-17 15:34:30 
  * @Last Modified by: 唐云
- * @Last Modified time: 2021-05-17 17:39:03
+ * @Last Modified time: 2021-05-18 10:05:13
  头部组件
  */
 <template>
@@ -11,38 +11,63 @@
       <div class="logo sprite_01"></div>
       <div class="nav">
         <ul>
-          <li v-for="(item, index) in headerLinks" :key="item.title" :class="{'active': isActive === index}" @click="handleClickNav(index)">
-            <router-link :to="item.link">
+          <li
+            v-for="(item, index) in headerLinks"
+            :key="item.title"
+          >
+            <a :href="item.link" v-if="index > 2" target="_blank">
+              {{ item.title }}
+            </a>
+            <router-link
+              :to="item.link"
+              :class="{ active: isActive === item.link }"
+              @click="handleClickNav(item.link)"
+              v-else
+            >
               {{ item.title }}
               <i class="sprite_01 icon" v-if="index < 3"></i>
             </router-link>
+            <span class="hot sprite_01" v-if="index === 5"></span>
           </li>
         </ul>
       </div>
-      <div class="search"></div>
-      <div class="framer-center"></div>
-      <div class="login"></div>
+      <div class="search">
+        <div class="search-bg sprite_01">
+          <input type="text" placeholder="音乐/视频/电台/用户" />
+        </div>
+      </div>
+      <div class="framer-center">创作者中心</div>
+      <div class="login">登录</div>
     </div>
     <div class="bottom-line"></div>
   </div>
 </template>
 
 <script lang='ts'>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, onMounted, ref, Ref } from 'vue'
 import { headerLinks } from '@/common/local-data'
+import { useRoute } from 'vue-router'
 
 export default defineComponent({
   name: 'THeader',
   setup() {
-    let isActive = ref(0)
-    const handleClickNav = (index: number) => {
-      isActive.value = index
+    const isActive: Ref<string> = ref('') // 选中状态
+    const route = useRoute() // 路由
+    onMounted(() => {
+      isActive.value = route.path
+    })
+    /**
+     * nav导航点击事件
+     */
+    const handleClickNav = (link: string) => {
+      isActive.value = link
     }
 
     return {
       headerLinks,
       isActive,
-      handleClickNav
+      handleClickNav,
+      route
     }
   }
 })
