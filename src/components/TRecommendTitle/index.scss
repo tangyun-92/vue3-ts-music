@@ -1,16 +1,14 @@
+@import '@/styles/mixin.scss';
 .rec-title {
   height: 33px;
   padding: 0 10px 0 34px;
   background-position: -225px -156px;
   border-bottom: 2px solid #c10d0c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex();
   flex-wrap: nowrap;
 
   .title-left {
-    display: flex;
-    align-items: center;
+    @include flex();
 
     .tit {
       display: block;
