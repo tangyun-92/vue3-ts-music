@@ -2,7 +2,7 @@
  * @Author: 唐云 
  * @Date: 2021-05-19 10:43:01 
  * @Last Modified by: 唐云
- * @Last Modified time: 2021-05-19 10:45:30
+ * @Last Modified time: 2021-05-19 15:18:40
  * 发现音乐-热门推荐
  */
 
@@ -25,6 +25,19 @@ export function getTopBanners(): Promise<any> {
 export function getHotRecommend(limit: number): Promise<any> {
   return request({
     url: '/personalized',
+    params: {
+      limit
+    }
+  })
+}
+
+/**
+ * 获取新碟上架列表
+ * @param limit 
+ */
+export function getNewAlbums(limit: number): Promise<any> {
+  return request({
+    url: '/top/album',
     params: {
       limit
     }

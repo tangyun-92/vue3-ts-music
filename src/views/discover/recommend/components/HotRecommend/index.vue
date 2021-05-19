@@ -1,3 +1,10 @@
+/*
+ * @Author: 唐云 
+ * @Date: 2021-05-19 13:39:08 
+ * @Last Modified by:   唐云 
+ * @Last Modified time: 2021-05-19 13:39:08 
+ 热门推荐
+ */
 <template>
   <div class="hot-recommend">
     <t-recommend-title :title="'热门推荐'" :url="'/discover/play-list'" />

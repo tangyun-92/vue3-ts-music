@@ -2,14 +2,14 @@
  * @Author: 唐云 
  * @Date: 2021-05-19 09:25:20 
  * @Last Modified by: 唐云
- * @Last Modified time: 2021-05-19 13:23:03
+ * @Last Modified time: 2021-05-19 14:47:05
  发现音乐-热门推荐-title组件
  */
 <template>
   <div class="rec-title sprite_02">
     <div class="title-left">
       <router-link :to="url" class="tit">{{ title }}</router-link>
-      <div class="tab">
+      <div class="tab" v-if="title === '热门推荐'">
         <router-link class="tab-tit" to="#">华语</router-link>
         <span class="line">|</span>
         <router-link class="tab-tit" to="#">流行</router-link>
@@ -34,8 +34,18 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'TRecommendTitle',
   props: {
-    title: String,
-    url: String
+    title: {
+      type: String,
+      default() {
+        return '热门推荐'
+      }
+    },
+    url: {
+      type: String,
+      default() {
+        return ''
+      }
+    }
   }
 })
 </script>
