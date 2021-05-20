@@ -32,7 +32,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-, "src/axios.d.ts"  ],
+, "src/axios.d.ts", "src/store/modules/top-ranking.js"  ],
   "exclude": [
     "node_modules"
   ]

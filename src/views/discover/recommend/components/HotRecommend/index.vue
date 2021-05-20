@@ -1,8 +1,8 @@
 /*
  * @Author: 唐云 
  * @Date: 2021-05-19 13:39:08 
- * @Last Modified by:   唐云 
- * @Last Modified time: 2021-05-19 13:39:08 
+ * @Last Modified by: 唐云
+ * @Last Modified time: 2021-05-20 09:27:57
  热门推荐
  */
 <template>
@@ -25,13 +25,13 @@ import TRecommendTitle from '@/components/TRecommendTitle/index.vue'
 import TSongsCover from '@/components/TSongsCover/index.vue'
 
 export default defineComponent({
-  name: 'HotRecommend',
+  name: 'RecommendHotRecommend',
   components: { TRecommendTitle, TSongsCover },
   setup() {
     const hotRecommendList = ref()
     onMounted(() => {
-      getHotRecommend(1).then((res) => {
-        hotRecommendList.value = res.result.slice(0, 8)
+      getHotRecommend(8).then((res) => {
+        hotRecommendList.value = res.result
       })
     })
 

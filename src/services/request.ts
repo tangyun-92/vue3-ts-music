@@ -40,13 +40,15 @@ service.interceptors.response.use(
   }
 )
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const request = (requestObj: any) => {
-  const { url, method, data, timeout } = requestObj
+  const { url, method, data, timeout, params } = requestObj
   return service({
     url,
     method: method || 'post',
     data,
-    timeout: timeout || 10000
+    timeout: timeout || 10000,
+    params
   })
 }
 
