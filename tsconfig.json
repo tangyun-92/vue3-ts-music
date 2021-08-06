@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
@@ -27,6 +27,8 @@
     ]
   },
   "include": [
+    "src/**/*",
+    "src/main.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
